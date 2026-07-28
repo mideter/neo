@@ -5,6 +5,8 @@ vim.pack.add({
         src = "https://github.com/saghen/blink.cmp",
         version = "v1",
     },
+    { src = "https://github.com/nvim-lua/plenary.nvim" },
+    { src = "https://github.com/NeogitOrg/neogit" },
 })
 
 require("mason").setup({})
@@ -46,3 +48,6 @@ require("blink.cmp").setup({
     documentation = { auto_show = true },
   },
 })
+
+
+require("neogit").setup({})
