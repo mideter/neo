@@ -2,16 +2,37 @@
   "plugins": {
     "avante.nvim": {
       "rev": "8a5a5c16a3c693bf7d9a8da1ee78269e8728879b",
-      "src": "https://github.com/yetone/avante.nvim"
+      "src": "https://github.com/yetone/avante.nvim",
+      "version": "'main'"
     },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
       "version": "'v1'"
     },
+    "cmp-buffer": {
+      "rev": "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
+      "src": "https://github.com/hrsh7th/cmp-buffer"
+    },
+    "cmp-nvim-lsp": {
+      "rev": "cbc7b02bb99fae35cb42f514762b89b5126651ef",
+      "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
+    },
+    "cmp-path": {
+      "rev": "c642487086dbd9a93160e1679a1327be111cbc25",
+      "src": "https://github.com/hrsh7th/cmp-path"
+    },
+    "copilot.lua": {
+      "rev": "0f616b9a51cb9e2498834dfd99f6da6966158eba",
+      "src": "https://github.com/zbirenbaum/copilot.lua"
+    },
     "fzf-lua": {
       "rev": "bb8f7ef06fcbf6f4b31fde344bc16f4d33c8ec7f",
       "src": "https://github.com/ibhagwan/fzf-lua"
+    },
+    "img-clip.nvim": {
+      "rev": "b6ddfb97b5600d99afe3452d707444afda658aca",
+      "src": "https://github.com/HakonHarnes/img-clip.nvim"
     },
     "lualine.nvim": {
       "rev": "221ce6b2d999187044529f49da6554a92f740a96",
@@ -29,6 +50,10 @@
       "rev": "de740991c12411b663994b2860f1a4fd0937c130",
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
+    "nvim-cmp": {
+      "rev": "2ffe79f1f021def8dd1fcd81deb16f1bb0d989f3",
+      "src": "https://github.com/hrsh7th/nvim-cmp"
+    },
     "nvim-web-devicons": {
       "rev": "2ae6958df7ced50baac5035cec0c15799eedfbf7",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
@@ -41,9 +66,17 @@
       "rev": "f422cb5c6855f150e2ddcfaf44e7157b98b34f6a",
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
+    "snacks.nvim": {
+      "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
+      "src": "https://github.com/folke/snacks.nvim"
+    },
     "tokyonight.nvim": {
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
       "src": "https://github.com/folke/tokyonight.nvim"
+    },
+    "y9nika.nvim": {
+      "rev": "18827266802e8e105c724c72a84c2c59beb5d90f",
+      "src": "https://github.com/y9san9/y9nika.nvim"
     }
   }
 }

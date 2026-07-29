@@ -1,3 +1,8 @@
+vim.opt.langmap =
+  "ёйцукенгшщзхъфывапролджэячсмитьбю;`qwertyuiop[]asdfghjkl;'zxcvbnm\\,." ..
+  ",ËЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;~QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>"
+vim.opt.langremap = true
+
 vim.keymap.set('n', '<leader>e', ':Explore<CR>')
 vim.keymap.set('n', '<leader><CR>', ':nohlsearch<CR>')
 vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
@@ -18,7 +23,3 @@ vim.keymap.set('n', '<leader>aa', ':AvanteAsk<CR>', opts)
 vim.keymap.set('v', '<leader>aa', ':AvanteAsk<CR>', opts)
 vim.keymap.set('n', '<leader>at', ':AvanteToggle<CR>', opts)
 
-vim.opt.langmap =
-  "ёйцукенгшщзхъфывапролджэячсмитьбю;`qwertyuiop[]asdfghjkl;'zxcvbnm\\,." ..
-  ",ËЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;~QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>"
-vim.opt.langremap = true

@@ -1,18 +1,19 @@
 vim.pack.add({
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/ibhagwan/fzf-lua" },
-    {
-        src = "https://github.com/saghen/blink.cmp",
-        version = "v1",
-    },
+
+    { src = "https://github.com/hrsh7th/nvim-cmp" },
+    { src = "https://github.com/hrsh7th/cmp-nvim-lsp" },
+    { src = "https://github.com/hrsh7th/cmp-buffer" },
+    { src = "https://github.com/hrsh7th/cmp-path" },
+
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/NeogitOrg/neogit" },
 
-    { src = "https://github.com/MunifTanjim/nui.nvim" },
-    { src = "https://github.com/nvim-tree/nvim-web-devicons" },
-    { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
-    { src = "https://github.com/yetone/avante.nvim" },
+    { src = "https://github.com/y9san9/y9nika.nvim" },
 })
+
+vim.cmd.colorscheme('y9nika')
 
 require("mason").setup({})
 
@@ -43,14 +44,25 @@ require('fzf-lua').setup({
     }
 })
 
-
-require("blink.cmp").setup({
-  keymap = { preset = "default" },
-  sources = {
-    default = { "lsp", "path", "buffer" }, -- snippets можно не трогать
+local cmp = require("cmp")
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      vim.snippet.expand(args.body) -- Neovim 0.10+
+    end,
   },
-  completion = {
-    documentation = { auto_show = true },
+  mapping = cmp.mapping.preset.insert({
+    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+    ["<C-e>"] = cmp.mapping.abort(),
+  }),
+  sources = {
+    { name = "nvim_lsp" },
+    { name = "path" },
+    { name = "buffer" },
+  },
+  window = {
+    documentation = cmp.config.window.bordered(),
   },
 })
 
@@ -58,37 +70,5 @@ require("blink.cmp").setup({
 require("neogit").setup({})
 
 
-require("render-markdown").setup({
-    file_types = { "markdown", "Avante" },
-})
-
-
-require("avante").setup({
-    provider = "cursor",
-    mode = "normal",
-    acp_providers = {
-        cursor = {
-            command = "/home/mid/.local/bin/agent",
-            args = { "acp" },
-            auth_method = "cursor_login",
-            env = {
-                HOME = os.getenv("HOME"),
-                PATH = os.getenv("PATH"),
-            },
-        },
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-         "MunifTanjim/nui.nvim",
-         "nvim-tree/nvim-web-devicons",
-         {
-            "MeanderingProgrammer/render-markdown.nvim",
-            opts = {
-               file_types = { "markdown", "Avante" },
-            },
-            ft = { "markdown", "Avante" },
-         },
-      },
-  },
-})
-
+require("plugins.avante")
 
