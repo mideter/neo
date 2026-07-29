@@ -7,6 +7,11 @@ vim.pack.add({
     },
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/NeogitOrg/neogit" },
+
+    { src = "https://github.com/MunifTanjim/nui.nvim" },
+    { src = "https://github.com/nvim-tree/nvim-web-devicons" },
+    { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
+    { src = "https://github.com/yetone/avante.nvim" },
 })
 
 require("mason").setup({})
@@ -51,3 +56,39 @@ require("blink.cmp").setup({
 
 
 require("neogit").setup({})
+
+
+require("render-markdown").setup({
+    file_types = { "markdown", "Avante" },
+})
+
+
+require("avante").setup({
+    provider = "cursor",
+    mode = "normal",
+    acp_providers = {
+        cursor = {
+            command = "/home/mid/.local/bin/agent",
+            args = { "acp" },
+            auth_method = "cursor_login",
+            env = {
+                HOME = os.getenv("HOME"),
+                PATH = os.getenv("PATH"),
+            },
+        },
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+         "MunifTanjim/nui.nvim",
+         "nvim-tree/nvim-web-devicons",
+         {
+            "MeanderingProgrammer/render-markdown.nvim",
+            opts = {
+               file_types = { "markdown", "Avante" },
+            },
+            ft = { "markdown", "Avante" },
+         },
+      },
+  },
+})
+
+

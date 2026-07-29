@@ -14,6 +14,9 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set('n', 'gd', ":lua vim.lsp.buf.definition()<CR>", opts)
 vim.keymap.set('n', '<leader>fo', ":lua vim.lsp.buf.format()<CR>", opts)
 vim.keymap.set('n', '<leader>gg', ':Neogit<CR>', opts)
+vim.keymap.set('n', '<leader>aa', ':AvanteAsk<CR>', opts)
+vim.keymap.set('v', '<leader>aa', ':AvanteAsk<CR>', opts)
+vim.keymap.set('n', '<leader>at', ':AvanteToggle<CR>', opts)
 
 vim.opt.langmap =
   "ёйцукенгшщзхъфывапролджэячсмитьбю;`qwertyuiop[]asdfghjkl;'zxcvbnm\\,." ..

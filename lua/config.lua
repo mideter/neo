@@ -23,7 +23,6 @@ vim.opt.clipboard = "unnamedplus" -- use system clipboard for all yank/paste/del
 vim.g.mapleader = " " -- set space as leader key (prefix for custom mapplings)
 
 
-
 vim.opt.swapfile = false
 
 
