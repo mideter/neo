@@ -11,10 +11,22 @@ vim.pack.add({
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/NeogitOrg/neogit" },
 
-    { src = "https://github.com/y9san9/y9nika.nvim" },
+    { src = "https://github.com/folke/tokyonight.nvim" },
 })
 
-vim.cmd.colorscheme("y9nika")
+require("tokyonight").setup({
+  style = "moon",
+  transparent = true,
+  styles = {
+    sidebars = "transparent",
+    floats = "transparent",
+  },
+  --on_highlights = function(hl, c)
+    -- softer current line number (default is bold + bright)
+--    hl.CursorLineNr = { fg = c.fg_dark, bold = false }
+  --end,
+})
+vim.cmd.colorscheme("tokyonight")
 
 require("nvim-treesitter").setup({
     ensure_install = { "markdown", "markdown_inline" },

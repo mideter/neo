@@ -23,4 +23,4 @@ vim.opt.clipboard = "unnamedplus" -- use system clipboard for all yank/paste/del
 vim.opt.laststatus = 3 -- global statusline (one for all windows)
 vim.opt.termguicolors = true -- enable 24-bit RGB colors in the terminal
 
-vim.api.nvim_set_hl(0, "NormalFloat", { link = "Normal" })
+vim.opt.splitright = true

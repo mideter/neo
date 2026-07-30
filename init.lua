@@ -6,4 +6,4 @@ require("plugins")
 require("keymap")
 require("lsp")
 
-vim.cmd('syntax on')
+vim.cmd("syntax on")
