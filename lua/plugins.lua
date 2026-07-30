@@ -14,7 +14,7 @@ vim.pack.add({
     { src = "https://github.com/y9san9/y9nika.nvim" },
 })
 
-vim.cmd.colorscheme('y9nika')
+vim.cmd.colorscheme("y9nika")
 
 require("nvim-treesitter").setup({
     ensure_install = { "markdown", "markdown_inline" },
@@ -74,6 +74,3 @@ cmp.setup({
 
 
 require("neogit").setup({})
-
-
-require("plugins.avante")

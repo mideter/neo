@@ -1,5 +1,3 @@
--- .config/nvim/lua/config.lua
-
 vim.opt.showmatch = false
 vim.opt.swapfile = false
 
@@ -22,13 +20,7 @@ vim.opt.listchars = { tab = '▸ ', trail = '·' } -- show invisible characters:
 vim.opt.list = true
 
 vim.opt.clipboard = "unnamedplus" -- use system clipboard for all yank/paste/delete operations
-vim.opt.laststatus = 3 -- global statusline (one for all windows; needed by Avante sidebar)
+vim.opt.laststatus = 3 -- global statusline (one for all windows)
 vim.opt.termguicolors = true -- enable 24-bit RGB colors in the terminal
 
--- Avante sidebar slightly distinct from editor
-vim.api.nvim_set_hl(0, "NormalFloat", { link = "Normal" }) -- make floats (and Avante sidebar) match the editor
-vim.api.nvim_set_hl(0, "AvanteSidebarWinSeparator", { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, "AvanteSidebarNormal", { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, "AvanteSidebarWinHorizontalSeparator", { link = "NormalFloat" })
-
-vim.g.mapleader = " " -- set space as leader key (prefix for custom mapplings)
+vim.api.nvim_set_hl(0, "NormalFloat", { link = "Normal" })
