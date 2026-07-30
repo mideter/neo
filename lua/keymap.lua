@@ -8,6 +8,7 @@ vim.keymap.set('n', '<leader><CR>', ':nohlsearch<CR>')
 vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
 vim.keymap.set('n', '<leader>w', ':write<CR>')
 vim.keymap.set('n', '<leader>q', ':quit<CR>')
+vim.keymap.set('n', '<leader>bn', ":bn<CR> :bd #<CR>")
 
 local fzf = require("fzf-lua")
 
