@@ -32,4 +32,3 @@ vim.api.nvim_set_hl(0, "AvanteSidebarNormal", { link = "NormalFloat" })
 vim.api.nvim_set_hl(0, "AvanteSidebarWinHorizontalSeparator", { link = "NormalFloat" })
 
 vim.g.mapleader = " " -- set space as leader key (prefix for custom mapplings)
-

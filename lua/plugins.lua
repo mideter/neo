@@ -77,4 +77,3 @@ require("neogit").setup({})
 
 
 require("plugins.avante")
-

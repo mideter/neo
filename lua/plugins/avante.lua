@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd(
       end
     end
   }
-) 
+)
 
 vim.pack.add({
   {
@@ -54,4 +54,3 @@ require('avante').setup({
         },
     },
 })
-
