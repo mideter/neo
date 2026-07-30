@@ -1,4 +1,5 @@
 vim.pack.add({
+    { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/ibhagwan/fzf-lua" },
 
@@ -14,6 +15,11 @@ vim.pack.add({
 })
 
 vim.cmd.colorscheme('y9nika')
+
+require("nvim-treesitter").setup({
+    ensure_install = { "markdown", "markdown_inline" },
+    latex = { enabled = false }, -- или auto_install = true
+})
 
 require("mason").setup({})
 

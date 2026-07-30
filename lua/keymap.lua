@@ -23,4 +23,3 @@ vim.keymap.set('n', '<leader>gg', ':Neogit<CR>', opts)
 vim.keymap.set('n', '<leader>aa', ':AvanteAsk<CR>', opts)
 vim.keymap.set('v', '<leader>aa', ':AvanteAsk<CR>', opts)
 vim.keymap.set('n', '<leader>at', ':AvanteToggle<CR>', opts)
-
