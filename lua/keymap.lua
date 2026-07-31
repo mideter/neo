@@ -3,15 +3,17 @@ vim.opt.langmap =
   ",ËЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;~QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>"
 vim.opt.langremap = true
 
+local opts = { noremap = true, silent = true }
+
 vim.keymap.set("i", "jj", "<Esc>")
 
-vim.keymap.set("n", "<leader>e", ":Explore<CR>")
-vim.keymap.set("n", "<leader><CR>", ":nohlsearch<CR>")
-vim.keymap.set("n", "<leader>o", ":update<CR> :source<CR>")
-vim.keymap.set("n", "<leader>w", ":write<CR>")
-vim.keymap.set("n", "<leader>q", ":quit<CR>")
-vim.keymap.set("n", "<leader>bn", ":bn<CR> :bd #<CR>")
-vim.keymap.set("n", "<leader>tt", ":terminal<CR>")
+vim.keymap.set("n", "<leader>e", ":Explore<CR>", opts)
+vim.keymap.set("n", "<leader><CR>", ":nohlsearch<CR>", opts)
+vim.keymap.set("n", "<leader>o", ":update<CR> :source<CR>", opts)
+vim.keymap.set("n", "<leader>w", ":write<CR>", opts)
+vim.keymap.set("n", "<leader>q", ":quit<CR>", opts)
+vim.keymap.set("n", "<leader>bn", ":bn<CR> :bd #<CR>", opts)
+vim.keymap.set("n", "<leader>tt", ":terminal<CR>", opts)
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 
 local fzf = require("fzf-lua")
@@ -19,8 +21,6 @@ vim.keymap.set("n", "<leader><leader>", fzf.files, { desc = "Find files" })
 vim.keymap.set("n", "<leader>/", fzf.live_grep, { desc = "Live grep" })
 vim.keymap.set("n", "<leader>fb", fzf.buffers, { desc = "Buffers" })
 vim.keymap.set("n", "<leader>fh", fzf.help_tags, { desc = "Help" })
-
-local opts = { noremap = true, silent = true }
 
 vim.keymap.set('n', 'gd', ":lua vim.lsp.buf.definition()<CR>", opts)
 vim.keymap.set('n', '<leader>fo', ":lua vim.lsp.buf.format()<CR>", opts)
@@ -31,3 +31,9 @@ vim.keymap.set("n", "<leader>aa", function()
   vim.cmd.terminal("agent")
   vim.cmd.startinsert()
 end, { desc = "Open agent in vsplit" })
+
+vim.keymap.set("n", "<leader>al", function()
+  vim.cmd.vsplit()
+  vim.cmd.terminal("agent ls")
+  vim.cmd.startinsert()
+end, { desc = "Open agent list in vsplit" })

@@ -12,6 +12,10 @@ vim.pack.add({
     { src = "https://github.com/NeogitOrg/neogit" },
 
     { src = "https://github.com/folke/tokyonight.nvim" },
+
+    { src = "https://github.com/obsidian-nvim/obsidian.nvim" },
+
+    { src = "https://github.com/nvim-tree/nvim-web-devicons" },
 })
 
 require("tokyonight").setup({
@@ -27,6 +31,23 @@ require("tokyonight").setup({
     end,
 })
 vim.cmd.colorscheme("tokyonight")
+
+
+require("obsidian").setup({
+    legacy_commands = false,
+    workspaces = {
+        {
+            name = "seneca_obsidian",
+            path = "~/seneca_obsidian",
+        },
+    },
+})
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+        vim.opt_local.conceallevel = 2
+    end,
+})
 
 require("nvim-treesitter").setup({
     ensure_install = { "markdown", "markdown_inline" },
