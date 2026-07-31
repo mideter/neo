@@ -15,16 +15,16 @@ vim.pack.add({
 })
 
 require("tokyonight").setup({
-  style = "moon",
-  transparent = true,
-  styles = {
-    sidebars = "transparent",
-    floats = "transparent",
-  },
-  --on_highlights = function(hl, c)
-    -- softer current line number (default is bold + bright)
---    hl.CursorLineNr = { fg = c.fg_dark, bold = false }
-  --end,
+    style = "moon",
+    transparent = true,
+    styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+    },
+    on_highlights = function(hl, c)
+        -- softer current line number (default is bold + bright)
+        hl.CursorLineNr = { fg = c.fg_dark, bold = false }
+    end,
 })
 vim.cmd.colorscheme("tokyonight")
 

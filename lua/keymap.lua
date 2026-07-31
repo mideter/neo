@@ -11,6 +11,8 @@ vim.keymap.set("n", "<leader>o", ":update<CR> :source<CR>")
 vim.keymap.set("n", "<leader>w", ":write<CR>")
 vim.keymap.set("n", "<leader>q", ":quit<CR>")
 vim.keymap.set("n", "<leader>bn", ":bn<CR> :bd #<CR>")
+vim.keymap.set("n", "<leader>tt", ":terminal<CR>")
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 
 local fzf = require("fzf-lua")
 vim.keymap.set("n", "<leader><leader>", fzf.files, { desc = "Find files" })
